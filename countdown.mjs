@@ -1,6 +1,8 @@
 /** Absolute deadline: 7 November 2026, 18:30 Lima / 20:30 Santiago. */
 export const DEADLINE = Date.parse('2026-11-07T23:30:00Z');
 export const REFERENCE_TIME = Date.parse('2026-11-05T19:49:00Z');
+/** Progress begins two weeks before the date the countdown was requested. */
+export const PROGRESS_START = Date.parse('2026-10-22T19:49:00Z');
 
 /** Derive the countdown from the clock so background tabs cannot cause drift. */
 export function getCountdown(now = Date.now()) {
@@ -13,6 +15,6 @@ export function getCountdown(now = Date.now()) {
     seconds: totalSeconds % 60,
     totalSeconds,
     finished: remaining === 0,
-    progress: Math.min(1, Math.max(0, 1 - remaining / (DEADLINE - REFERENCE_TIME))),
+    progress: Math.min(1, Math.max(0, 1 - remaining / (DEADLINE - PROGRESS_START))),
   };
 }
