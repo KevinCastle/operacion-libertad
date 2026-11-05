@@ -10,7 +10,9 @@ El 5 de noviembre de 2026 a las 16:49 en America/Santiago faltaban 2 días, 3 ho
 
 Una sola página en español: marca OPERACIÓN LIBERTAD, título grande, cuenta regresiva en cuatro unidades, tarjeta de meme que rota y botón para cambiarla. Estética de papel crema, tinta oscura, naranja y verde lima, tipografía expresiva y detalles de oficina. El usuario confirmó el nombre Adrián y pidió memes de The Office: incorporar imágenes de la serie guardadas localmente y registrar fuentes en docs/asset-sources.md. Permitir detener GIFs; usar una imagen estática con movimiento reducido.
 
-Al vencer, mostrar ¡ERES LIBRE!, confeti y mensajes de despedida. Una prueba claramente identificada permite ver la celebración y regresar al contador real. Sonido opcional iniciado únicamente mediante interacción. Compartir con API nativa y alternativas de copiar enlace o copia manual. No añadir datos privados al enlace.
+Al vencer, mostrar ¡ERES LIBRE!, confeti y mensajes de despedida, incluso al abrir la página horas o días después. Por petición posterior del usuario se retira el modo de prueba y sus controles. Sonido opcional iniciado únicamente mediante interacción. Compartir con API nativa y alternativas de copiar enlace o copia manual. No añadir datos privados al enlace.
+
+La barra de progreso comienza el 22 de octubre de 2026 a las 16:49 de Santiago (2026-10-22T19:49:00Z), dos semanas antes de la referencia inicial. Esta fecha se separa de la referencia del contador para conservar la duración y el vencimiento originales. La etiqueta SVG FUERA DE OFICINA debe mantener texto y padding dentro del fondo negro y del viewBox, incluida su rotación.
 
 ## Arquitectura y aceptación
 

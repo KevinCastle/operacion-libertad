@@ -1,9 +1,8 @@
-import { getCountdown } from './countdown.mjs';
+import { getCountdown } from './countdown.mjs?v=2';
 
 const $ = (id) => document.getElementById(id);
 const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 const announcer = $('announcer');
-let preview = false;
 let wasFinished = false;
 let celebrationVisible = false;
 let soundEnabled = false;
@@ -181,26 +180,19 @@ $('sound-button').addEventListener('click', () => {
 });
 $('replay-button').addEventListener('click', () => { confetti(); void playSound(); announce('¡Otra ronda! Se celebra la libertad.'); });
 
-function showCelebration(show, justExpired = false) {
-  if (celebrationVisible === show) return;
-  celebrationVisible = show;
-  document.body.classList.toggle('is-celebrating', show);
-  $('countdown-section').hidden = show;
-  $('progress-section').hidden = show;
-  $('celebration-section').hidden = !show;
-  $('preview-section').hidden = show;
-  if (show) {
-    $('hero-heading').innerHTML = '¡ERES<br>LIBRE!';
-    $('hero-eyebrow').textContent = 'ADRIÁN, MISIÓN CUMPLIDA.';
-    $('hero-copy').textContent = 'Adrián, se acabó el «para ayer». Empieza el «¿y ahora qué quiero hacer?».';
-    if (justExpired || preview) { confetti(); if (soundEnabled) void playSound(); }
-    announce(preview ? 'Vista previa de la celebración. ¡Eres libre! Puedes volver al contador real.' : '¡Eres libre! La cuenta regresiva terminó. Se cerró la sesión, se abrió la vida.');
-  } else {
-    $('hero-heading').innerHTML = 'Tu próxima<br> reunión:<br> <span>ser libre.</span><svg class="title-spark" viewBox="0 0 80 80" aria-hidden="true"><path d="M40 3v74M3 40h74M14 14l52 52M14 66l52-52"/></svg>';
-    $('hero-eyebrow').textContent = 'ADRIÁN, LA RECTA FINAL.';
-    $('hero-copy').innerHTML = 'Adrián, ya casi puedes decir «lo vemos el lunes»<br class="desktop-break"> y no volver a verlo nunca más.';
-    stopConfetti();
-  }
+function showCelebration() {
+  if (celebrationVisible) return;
+  celebrationVisible = true;
+  document.body.classList.add('is-celebrating');
+  $('countdown-section').hidden = true;
+  $('progress-section').hidden = true;
+  $('celebration-section').hidden = false;
+  $('hero-heading').innerHTML = '¡ERES<br>LIBRE!';
+  $('hero-eyebrow').textContent = 'ADRIÁN, MISIÓN CUMPLIDA.';
+  $('hero-copy').textContent = 'Adrián, se acabó el «para ayer». Empieza el «¿y ahora qué quiero hacer?».';
+  confetti();
+  if (soundEnabled) void playSound();
+  announce('¡Eres libre! La cuenta regresiva terminó. Se cerró la sesión, se abrió la vida.');
 }
 function updateCountdown() {
   const countdown = getCountdown();
@@ -212,29 +204,9 @@ function updateCountdown() {
     lastProgress = percent;
   }
   // Once the deadline has passed, a later clock correction must not reopen the countdown.
-  const justExpired = countdown.finished && !wasFinished;
   wasFinished ||= countdown.finished;
-  showCelebration(preview || wasFinished, justExpired);
+  if (wasFinished) showCelebration();
 }
-$('preview-button').addEventListener('click', () => {
-  preview = true;
-  $('preview-banner').hidden = false;
-  updateCountdown();
-  $('back-button').focus({ preventScroll: true });
-  $('preview-banner').scrollIntoView({ behavior: motionQuery.matches ? 'instant' : 'smooth', block: 'start' });
-});
-$('back-button').addEventListener('click', () => {
-  preview = false;
-  $('preview-banner').hidden = true;
-  updateCountdown();
-  if (wasFinished) {
-    $('replay-button').focus();
-    announce('La cuenta regresiva real ya terminó. ¡Ahora sí eres libre!');
-  } else {
-    $('preview-button').focus();
-    announce('De vuelta al contador real. La libertad sigue en camino.');
-  }
-});
 
 async function share(event) {
   shareTrigger = event.currentTarget;

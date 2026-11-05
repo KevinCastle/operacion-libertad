@@ -1,5 +1,22 @@
 # Cuenta regresiva para la libertad
 
+## Ajustes solicitados desde comentarios del navegador
+
+- [x] Plan: ampliar etiqueta SVG sin salir del viewBox, separar inicio de progreso de referencia temporal y eliminar ensayo de celebración de HTML/JS/CSS.
+- [x] Contador: progreso desde 22 de octubre de 2026, 16:49 Santiago / 14:49 Lima. Fecha final y tiempo restante sin cambios.
+- [x] UI: etiqueta negra con padding, texto accesible del progreso actualizado y sin controles de prueba.
+- [x] Verificar nueve pruebas, etiqueta a 770 px y celebración automática al abrir después del vencimiento. El cambio de viewport a móvil no se aplicó en esta sesión; no se declara una nueva comprobación a 390 px.
+- [ ] Publicar en el mismo GitHub Pages y comprobar archivos publicados.
+
+### Validación de ajustes
+
+- Nueve pruebas aprobadas; dos nuevas pruebas de progreso fallaron con el modelo anterior y pasaron con el inicio del 22 de octubre.
+- Inspección real a 770 px: texto de etiqueta dentro del fondo, con aproximadamente 20.7 px de margen horizontal por lado; sin desbordamiento de página. Progreso accesible 87 % y cero elementos de ensayo.
+- Dos copias temporales fuera del repositorio simularon reloj posterior al vencimiento (10 de noviembre) y transición desde cinco segundos restantes: en ambas se activó la celebración automáticamente. No se modificó el reloj del equipo ni se añadió un modo de prueba al sitio.
+- Revisión independiente sin hallazgos materiales; no quedan referencias a preview ni handlers de botones eliminados.
+- Nueva navegación local después de completar cambios: sin errores ni advertencias en consola. Una pestaña de QA creada mientras se editaban los archivos conservó un error transitorio previo a la integración, que no se reprodujo después.
+- Referencias a CSS y módulos con v=2 para evitar mezclar HTML nuevo con código en caché de la versión anterior.
+
 - [x] Confirmar fecha: 7 de noviembre de 2026, 18:30 Lima / 20:30 Santiago (23:30 UTC).
 - [x] Revisar repositorio: vacío, sin dependencias ni harness de proyecto.
 - [x] Definir alcance y plan en docs/superpowers.

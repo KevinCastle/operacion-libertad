@@ -6,7 +6,6 @@ test('the reported remaining interval is exactly 2 days, 3 hours and 41 minutes'
   const result = getCountdown(REFERENCE_TIME);
   assert.deepEqual([result.days, result.hours, result.minutes, result.seconds], [2, 3, 41, 0]);
   assert.equal(result.finished, false);
-  assert.equal(result.progress, 0);
 });
 
 test('Lima and Santiago deadline representations identify the same instant', () => {
@@ -42,6 +41,18 @@ test('resuming after a suspended tab derives the correct time directly from the 
   assert.equal(result.seconds, 2);
 });
 
-test('progress stays within its bounds even before the reported reference', () => {
-  assert.equal(getCountdown(REFERENCE_TIME - 86400000).progress, 0);
+test('progress starts two weeks before the original reference without changing the countdown', () => {
+  const start = Date.parse('2026-10-22T19:49:00Z');
+  assert.equal(getCountdown(start).progress, 0);
+  const expected = (REFERENCE_TIME - start) / (DEADLINE - start);
+  assert.ok(Math.abs(getCountdown(REFERENCE_TIME).progress - expected) < 1e-12);
+});
+
+test('progress reaches halfway halfway through the complete October-to-November interval', () => {
+  const start = Date.parse('2026-10-22T19:49:00Z');
+  assert.equal(getCountdown((start + DEADLINE) / 2).progress, 0.5);
+});
+
+test('progress stays within its bounds before the October start', () => {
+  assert.equal(getCountdown(Date.parse('2026-10-21T19:49:00Z')).progress, 0);
 });

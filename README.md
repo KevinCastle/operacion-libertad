@@ -16,7 +16,7 @@ Abrir http://127.0.0.1:4173. Requiere Python 3 para el servidor. Los módulos ne
 
 El contador termina el **sábado 7 de noviembre de 2026 a las 18:30 en Lima**, equivalente a **20:30 en Santiago** y **23:30 UTC**. Se obtuvo sumando 2 días, 3 horas y 41 minutos al 5 de noviembre, 16:49 de Santiago.
 
-El instante está definido en `libertad/dist/countdown.mjs`. No depende de la zona horaria del navegador. Usa el reloj del dispositivo; conviene tener la hora automática activada.
+El instante está definido en `libertad/dist/countdown.mjs`. La barra de progreso comienza el **22 de octubre de 2026, 16:49 en Santiago**, dos semanas antes de la referencia original; el contador mantiene su fecha final. No depende de la zona horaria del navegador. Usa el reloj del dispositivo; conviene tener la hora automática activada.
 
 ## Comprobar
 
@@ -25,7 +25,7 @@ npm test
 node --check libertad/dist/app.mjs
 ```
 
-Se comprueba la referencia original, equivalencia de zonas horarias, el último segundo parcial, vencimiento exacto, apertura tardía y reanudación después de suspender la pestaña. La celebración de prueba no cambia el contador real.
+Se comprueba la referencia original, equivalencia de zonas horarias, el último segundo parcial, vencimiento exacto, apertura tardía, reanudación después de suspender la pestaña y el progreso desde octubre. La celebración aparece automáticamente al vencer, también cuando alguien abre la página horas o días después. No hay un modo público de ensayo.
 
 ## Publicación en GitHub Pages
 
