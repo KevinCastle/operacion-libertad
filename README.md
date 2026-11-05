@@ -29,7 +29,10 @@ Se comprueba la referencia original, equivalencia de zonas horarias, el último 
 
 ## Publicación en GitHub Pages
 
-El usuario autorizó los commits necesarios para subir esta entrega a su GitHub personal y publicarla. El repositorio de destino es `KevinCastle/operacion-libertad`.
+El usuario autorizó los commits necesarios para subir esta entrega a su GitHub personal y publicarla.
+
+- Sitio: https://kevincastle.github.io/operacion-libertad/
+- Repositorio: https://github.com/KevinCastle/operacion-libertad
 
 El contenido completo para alojar está en `libertad/dist/`. La rama `main` conserva el código, pruebas y documentación; `gh-pages` contiene únicamente el sitio estático y es la fuente de GitHub Pages. No requiere backend ni build. `.nojekyll` evita procesar los archivos como un sitio Jekyll.
 
@@ -43,4 +46,4 @@ git subtree push --prefix libertad/dist origin gh-pages
 
 No crear commits automáticamente para trabajos futuros: la autorización de esta sesión corresponde a esta publicación. Las capturas locales se excluyen mediante `.gitignore`.
 
-El enlace local funciona únicamente en este equipo. El enlace público se obtiene en la configuración de Pages del repositorio.
+El enlace local funciona únicamente en este equipo. El enlace público se sirve mediante HTTPS y no exige iniciar sesión.

@@ -26,6 +26,18 @@
 
 - [x] Confirmar cuenta personal KevinCastle y comprobar que operacion-libertad no existe.
 - [x] Plan: conservar fuente/pruebas en main y publicar libertad/dist mediante gh-pages, sin workflow ni dependencias nuevas. Ignorar capturas locales y añadir .nojekyll.
-- [ ] Revalidar, crear el commit autorizado y subir a repositorio público KevinCastle/operacion-libertad.
-- [ ] Activar Pages desde gh-pages, esperar publicación y verificar la URL real en navegador.
-- [ ] Registrar resultado y entregar enlaces del sitio y repositorio.
+- [x] Revalidar, crear el commit autorizado y subir a repositorio público KevinCastle/operacion-libertad.
+- [x] Activar Pages desde gh-pages y esperar publicación; comprobar los archivos públicos por HTTP. La apertura en Codex se solicitó; el control del navegador no estuvo disponible para una segunda inspección visual.
+- [x] Registrar resultado y preparar los enlaces del sitio y repositorio para la entrega.
+
+### Resultado de publicación
+
+- Repositorio público: https://github.com/KevinCastle/operacion-libertad
+- Sitio público: https://kevincastle.github.io/operacion-libertad/
+- Código inicial: 01ca301. Rama de sitio gh-pages: a544e93.
+- GitHub Pages: estado built; fuente gh-pages, ruta /; HTTPS activado.
+- Ejecución 42103709299: build y deploy aprobados.
+- Verificación: los 12 archivos públicos devuelven HTTP 200 y coinciden por SHA-256 con los archivos locales ya probados. app.mjs se sirve como text/javascript.
+- Las siete pruebas del contador y la comprobación de sintaxis pasaron antes de subir.
+- La revisión visual local ya estaba aprobada; el navegador automatizado devolvió un error de disponibilidad al intentar revisar la URL pública. No se atribuye una inspección visual remota a esta entrega.
+- GitHub personal confirmado; los commits usan su identidad noreply de GitHub en lugar del correo de trabajo.
