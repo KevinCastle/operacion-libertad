@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#F7F3E9">
+    <meta name="description" content="La cuenta regresiva oficial para cerrar el correo, soltar el mouse y estrenar la libertad. 7 de noviembre de 2026, 18:30 en Lima.">
+    <title>Adrián, ya casi eres libre — Operación Libertad</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23D9EF73'/%3E%3Cpath d='M20 15v34h29' stroke='%2324231F' stroke-width='9' fill='none'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./app.mjs"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Saltar al contador</a>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="./" aria-label="Operación Libertad, inicio"><span class="brand-mark" aria-hidden="true">↗</span><span>OPERACIÓN<br>LIBERTAD</span></a>
+        <div class="header-right"><span class="header-note">Una salida por la puerta grande.</span><button class="button button-outline share-button" type="button"><span>Compartir</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v8h14v-8"/></svg></button></div>
+      </header>
+
+      <main id="main">
+        <div class="preview-banner" id="preview-banner" hidden><p><strong>Modo ensayo.</strong> Esta es una vista previa de la celebración. El contador real sigue corriendo.</p><button class="text-button" id="back-button" type="button">← Volver al contador</button></div>
+        <section class="hero" aria-labelledby="hero-heading">
+          <div class="hero-content"><p class="eyebrow"><span class="status-dot" aria-hidden="true"></span><span id="hero-eyebrow">ADRIÁN, LA RECTA FINAL.</span></p><h1 id="hero-heading">Tu próxima<br> reunión:<br> <span>ser libre.</span><svg class="title-spark" viewBox="0 0 80 80" aria-hidden="true"><path d="M40 3v74M3 40h74M14 14l52 52M14 66l52-52"/></svg></h1><p class="hero-copy" id="hero-copy">Adrián, ya casi puedes decir «lo vemos el lunes»<br class="desktop-break"> y no volver a verlo nunca más.</p></div>
+          <div class="hero-art" role="img" aria-label="Un maletín sonriente sale de la oficina por una puerta verde, rumbo a la libertad">
+            <div class="art-note">última misión: salir de aquí <span aria-hidden="true">↴</span></div>
+            <svg viewBox="0 0 430 365" aria-hidden="true">
+              <defs><pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0v25" fill="none" stroke="#24231f" stroke-opacity=".08"/></pattern></defs>
+              <path d="M68 45C147-1 293 9 350 93c71 103 11 217-99 237C124 353 6 270 25 161 31 117 36 80 68 45Z" fill="#D9EF73"/>
+              <path d="M68 45C147-1 293 9 350 93c71 103 11 217-99 237C124 353 6 270 25 161 31 117 36 80 68 45Z" fill="url(#grid)"/>
+              <g stroke="#24231F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M100 281h247"/><path d="M158 277V68h123v209" fill="#F7F3E9"/><path d="m158 69 80 27v209l-80-28Z" fill="#F25B32"/><path d="M175 106v111l42 15V120Z" fill="#FF9A78"/><path d="M218 248v11"/><path d="m275 179 68-22m-28-17 28 17-14 27" fill="none"/>
+                <path d="m98 282-9 30-24 3m68-32 12 27 25 1" fill="none"/><rect x="64" y="208" width="92" height="77" rx="17" fill="#F7F3E9" transform="rotate(-8 110 246)"/><path d="M89 208v-12c0-15 31-15 31 0v9" fill="none"/><path d="M94 239v4m25-8v4m-23 14q13 12 24-4" fill="none"/><path d="m69 244-25 8-11-12m121-4 23-14 5-16" fill="none"/><path d="m37 230-4 10-11-2" fill="none"/>
+                <path d="m322 69 8-15 8 15 16 7-16 7-8 16-8-16-16-7Z" fill="#F7F3E9"/><path d="m55 118 5-12 6 12 12 6-12 5-6 12-5-12-12-5Z" fill="#F25B32"/><path d="m300 260 9-8m5 23 13-2"/>
+              </g>
+              <g transform="rotate(9 332 310)"><rect x="269" y="292" width="132" height="37" rx="4" fill="#24231F"/><text x="335" y="316" text-anchor="middle" fill="#F7F3E9" font-family="Arial,sans-serif" font-size="14" font-weight="800" letter-spacing="1">FUERA DE OFICINA</text></g>
+            </svg>
+            <span class="art-caption">sin pendientes. sin culpa. sin volver.</span>
+          </div>
+        </section>
+
+        <section class="countdown-section" id="countdown-section" aria-labelledby="countdown-heading">
+          <div class="countdown-top"><h2 id="countdown-heading">PARA ACTIVAR EL MODO LIBRE</h2><span class="countdown-tag"><span aria-hidden="true">↗</span> salida programada</span></div>
+          <div class="timer" role="timer" aria-label="Tiempo restante hasta la libertad" aria-live="off"><div class="time-unit"><span class="time-number" id="days">00</span><span class="time-label">DÍAS</span></div><span class="time-colon" aria-hidden="true">:</span><div class="time-unit"><span class="time-number" id="hours">00</span><span class="time-label">HORAS</span></div><span class="time-colon" aria-hidden="true">:</span><div class="time-unit"><span class="time-number" id="minutes">00</span><span class="time-label">MINUTOS</span></div><span class="time-colon" aria-hidden="true">:</span><div class="time-unit"><span class="time-number" id="seconds">00</span><span class="time-label">SEGUNDOS</span></div></div>
+          <div class="countdown-bottom"><p><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v4m10-4v4M4 10h16M4 5h16v16H4z"/></svg><time datetime="2026-11-07T23:30:00Z">Sáb. 7 de noviembre de 2026</time></p><span>18:30 Lima <span aria-hidden="true">/</span> 20:30 Santiago</span></div>
+        </section>
+        <div class="progress-section" id="progress-section"><div class="progress-track" role="progressbar" aria-label="Progreso hacia la libertad desde el 5 de noviembre" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progress-fill"></div></div><div class="progress-copy"><span>Una reunión menos. Un paso más.</span><span>La libertad está en camino <span aria-hidden="true">↗</span></span></div></div>
+
+        <section class="celebration-card" id="celebration-section" aria-labelledby="celebration-heading" hidden><span class="celebration-star" aria-hidden="true">✳</span><div><p class="eyebrow">ESTADO: FUERA DE OFICINA. PARA SIEMPRE.</p><h2 id="celebration-heading">Se cerró la sesión.<br>Se abrió la vida.</h2><p>Adrián, el correo puede esperar. Tu libertad, no.<br>Hoy se brinda por lo que viene. ¡Te lo ganaste!</p><div class="celebration-actions"><button class="button button-dark" type="button" id="replay-button">Otra ronda de confeti <span aria-hidden="true">↗</span></button><button class="text-button" type="button" id="sound-button" aria-pressed="false">Activar sonido <span aria-hidden="true">♫</span></button></div></div><img class="celebration-photo" src="./assets/michael-dwight-still.gif" alt="Michael y Dwight celebran bailando en The Office" width="320" height="220"></section>
+
+        <section class="meme-section" id="meme-section" aria-labelledby="meme-section-heading"><div class="section-heading"><div><p class="eyebrow">KIT DE SUPERVIVENCIA · THE OFFICE EDITION</p><h2 id="meme-section-heading">Mientras llega la hora…</h2></div><span class="small-note">humor de oficina, dosis ilimitada.</span></div><div class="meme-card"><div class="meme-visual" id="meme-visual" aria-hidden="true"></div><div class="meme-content"><div class="meme-kicker"><span>EL MOOD DE HOY</span><span id="meme-count">01 / 04</span></div><h3 id="meme-title"></h3><p id="meme-caption"></p><div class="meme-controls"><button class="text-button gif-toggle" id="gif-toggle" type="button" aria-pressed="false">Pausar GIFs</button><div><button type="button" class="icon-button" id="meme-previous" aria-label="Meme anterior">←</button><button type="button" class="icon-button" id="meme-next" aria-label="Meme siguiente">→</button></div></div></div></div><p class="meme-credits">Imágenes y GIFs: The Office · <a href="https://giphy.com/theoffice" target="_blank" rel="noopener noreferrer">GIPHY ↗</a> · <a href="https://imgflip.com/meme/307874855/No-God-please-no" target="_blank" rel="noopener noreferrer">Imgflip ↗</a></p></section>
+
+        <section class="preview-section" id="preview-section" aria-label="Prueba de celebración"><p>¿Y si ensayamos la despedida?</p><button type="button" class="text-button" id="preview-button">Probar la celebración <span aria-hidden="true">✳</span></button></section>
+        <div class="share-fallback" id="share-fallback" hidden><label for="share-link">Copia este enlace y recluta a la barra:</label><div><input id="share-link" type="url" readonly><button class="text-button" type="button" id="close-share">Cerrar</button></div></div>
+        <noscript><p class="noscript-note">Activa JavaScript para ver el contador en vivo y los memes. La libertad llega el 7 de noviembre de 2026 a las 18:30 de Lima.</p></noscript>
+      </main>
+
+      <footer class="site-footer"><span>Hecho con cariño y cero ganas de otra reunión.</span><span class="footer-signature">Nos vemos afuera. <span aria-hidden="true">↗</span></span></footer>
+    </div>
+    <p class="sr-only" id="announcer" role="status" aria-live="polite" aria-atomic="true"></p>
+    <canvas id="confetti" aria-hidden="true"></canvas>
+  </body>
+</html>
