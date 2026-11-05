@@ -6,7 +6,7 @@
 - [x] Contador: progreso desde 22 de octubre de 2026, 16:49 Santiago / 14:49 Lima. Fecha final y tiempo restante sin cambios.
 - [x] UI: etiqueta negra con padding, texto accesible del progreso actualizado y sin controles de prueba.
 - [x] Verificar nueve pruebas, etiqueta a 770 px y celebración automática al abrir después del vencimiento. El cambio de viewport a móvil no se aplicó en esta sesión; no se declara una nueva comprobación a 390 px.
-- [ ] Publicar en el mismo GitHub Pages y comprobar archivos publicados.
+- [x] Publicar en el mismo GitHub Pages y comprobar archivos publicados.
 
 ### Validación de ajustes
 
@@ -16,6 +16,8 @@
 - Revisión independiente sin hallazgos materiales; no quedan referencias a preview ni handlers de botones eliminados.
 - Nueva navegación local después de completar cambios: sin errores ni advertencias en consola. Una pestaña de QA creada mientras se editaban los archivos conservó un error transitorio previo a la integración, que no se reprodujo después.
 - Referencias a CSS y módulos con v=2 para evitar mezclar HTML nuevo con código en caché de la versión anterior.
+- Publicado: main 3588962, fuente gh-pages 1d07e5f; ejecución 42105326753 aprobada. Los cuatro archivos cambiados coinciden con la fuente local por SHA-256 y responden HTTP 200.
+- Navegador en la URL pública confirmado: progreso 87 %, cero controles de ensayo, módulo app.mjs?v=2 y consola sin errores/advertencias. Captura en artifacts/operacion-libertad-v2.png. Servidor y pestañas de fixtures temporales cerrados.
 
 - [x] Confirmar fecha: 7 de noviembre de 2026, 18:30 Lima / 20:30 Santiago (23:30 UTC).
 - [x] Revisar repositorio: vacío, sin dependencias ni harness de proyecto.
